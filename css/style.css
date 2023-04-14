@@ -55,7 +55,7 @@
 }
 
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/Background/lee-campbell-DtDlVpy-vvQ-unsplash.jpg);
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/Background/earthquake.jpg);
     background-size: cover;
     background-position: center center;
     padding-bottom: 120px;
@@ -330,59 +330,11 @@ h5 {
     margin-top: 25px
 }
 
-.Weeding {
-    background: url(../images/Background/Weeding.PNG) no-repeat;
-    height: 100vh;
-    background-size: 100% 100%
-}
-
-.garage {
-    background: url(../images/Background/Garage.PNG) no-repeat;
-    height: 100vh;
-    background-size: 100% 100%
-}
-
-.cafe {
-    background: url(../images/Background/Cafe.PNG) no-repeat;
-    height: 100vh;
-    background-size: 100% 100%
-}
-
-.gym {
-    background: url(../images/Background/Gym.PNG) no-repeat;
-    height: 100vh;
-    background-size: 100% 100%
-}
-
-.bank {
-    background: url(../images/Background/Bank.PNG) no-repeat;
-    height: 100vh;
-    background-size: 100% 100%
-}
-
-.doctor {
-    background: url(../images/Background/Doctor.PNG) no-repeat;
-    height: 100vh;
-    background-size: 100% 100%
-}
-
-.salon {
-    background: url(../images/Background/Salon.PNG) no-repeat;
-    height: 100vh;
-    background-size: 100% 100%
-}
-
-.bakery {
-    background: url(../images/Background/Bakery.PNG) no-repeat;
-    height: 100vh;
-    background-size: 100% 100%
-}
-
-.fashion {
-    background: url(../images/Background/Fashion.PNG) no-repeat;
-    height: 100vh;
-    background-size: 100% 100%
-}
+/*.bakery {*/
+/*    background: url(../images/Background/Bakery.PNG) no-repeat;*/
+/*    height: 100vh;*/
+/*    background-size: 100% 100%*/
+/*}*/
 
 .me .row .port {
     overflow: hidden;
