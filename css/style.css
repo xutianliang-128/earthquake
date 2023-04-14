@@ -517,12 +517,12 @@ h5 {
 
 .box:hover .box-contain::before {
     top: 2%;
-    opacity: .8
+    opacity: .3
 }
 
 .box:hover .box-contain::after {
     bottom: 2%;
-    opacity: .8
+    opacity: .3
 }
 
 .box h6 {
@@ -540,7 +540,39 @@ footer {
     text-align: center;
     color: #fff
 }
+/***********************************/
+#row2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 70vh;
+}
+#bar {
+    height: 70vh;
+}
 
+#bar_h {
+    height: 70vh;
+}
+
+main {
+    padding: 10px 5%;
+}
+
+.m_h1 {
+    text-align: center;
+}
+.m_input {
+    box-sizing: border-box;
+    width: 70%;
+}
+
+.slide_div {
+    display: grid;
+    grid-template-columns: auto 70%;
+    justify-content: center;
+    margin-top: 20px;
+}
+/***********************************/
 @keyframes animate {
 
     0%,

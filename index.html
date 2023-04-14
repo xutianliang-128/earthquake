@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Portfolio | Jayesh Tele</title>
+  <title>Earthquake | Turkey</title>
   <meta name="description" content="">
   <meta name="keywords" content="Top 10 Best portfolio designs">
   <meta name="author" content="best, portfolio, designs, templates">
@@ -20,6 +20,32 @@
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css">
+    <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <!-- <script src="https://code .highcharts.com/modules/wordcloud.js"></script> -->
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+  <!-- <script src="https://unpkg.com/i18next@21.6.2/dist/umd/i18next.min.js"></script> -->
+
+  <!-- <script src="./i18nextHttpBackend.min.js"></script> -->
+  <!-- <script src="./sentiment.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@2.1.0/dist/echarts-wordcloud.min.js"></script>
+  <!-- <script src="../../echarts/dist/echarts.js"></script> -->
+  <!-- <script src='../dist/echarts-wordcloud.js'></script> -->
+
+  <!-- Resources -->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/wc.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 </head>
 
 <body>
@@ -32,41 +58,51 @@
             <a class="navbar-brand col-6 col-lg-2" href="#">
 
               <h1 class="fw-bold" data-aos="fade-right">
-                <span>J</span>
+                <span>E</span>
                 <span>a</span>
-                <span>y</span>
-                <span>e</span>
-                <span>s</span>
+                <span>r</span>
+                <span>t</span>
                 <span>h</span>
+                <span>q</span>
+                <span>u</span>
+                <span>a</span>
+                <span>k</span>
+                <span>e</span>
               </h1>
 
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-              <a href="#"><i class="fas fa-bars"></i></a>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav mx-auto">
-                <a class="nav-link active text-white fs-5 ms-3 me-3" href="#scrollspyhome">Home</a>
-                <a class="nav-link text-white fs-5 ms-3 me-3" href="#scrollspyAbout">About</a>
-                <a class="nav-link text-white fs-5 ms-3 me-3" href="#scrollspyService">Service</a>
-                <a class="nav-link text-white fs-5 ms-3 me-3" href="#scrollspyPortfolio">Projects</a>
-                <a class="nav-link text-white fs-5 ms-3 me-3" href="#scrollspyContact">Contact</a>
-              </div>
-            </div>
+<!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">-->
+<!--              <a href="#"><i class="fas fa-bars"></i></a>-->
+<!--            </button>-->
+<!--            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">-->
+<!--              <div class="navbar-nav mx-auto">-->
+<!--                <a class="nav-link active text-white fs-5 ms-3 me-3" href="#scrollspyhome">Home</a>-->
+<!--                <a class="nav-link text-white fs-5 ms-3 me-3" href="#scrollspyAbout">About</a>-->
+<!--                <a class="nav-link text-white fs-5 ms-3 me-3" href="#scrollspyService">Service</a>-->
+<!--                <a class="nav-link text-white fs-5 ms-3 me-3" href="#scrollspyPortfolio">Projects</a>-->
+<!--                <a class="nav-link text-white fs-5 ms-3 me-3" href="#scrollspyContact">Contact</a>-->
+<!--              </div>-->
+<!--            </div>-->
           </div>
         </nav>
 
         <section class="intro">
           <div class="design" data-aos="fade-right">
-            <h2>Hi! I'm Jayesh</h2>
-            <h1>Front-End Web Developer <section>
-                Based In India.</section>
+            <h2>Group 7</h2>
+            <h1>Is Turkey Ready for Another <section>
+                EARTHQUAKE</section>
             </h1>
-            <p>I'm developer focused on crafting user‑friendly experiences, I am passionate about building excellent Web
-              Designs that improves the lives of those around me.</p>
-            <button class="btn">
-              <a href="#scrollspyPortfolio" style="text-decoration:none;color: #f52225;"> My Work</a>
-            </button>
+            <p>On February 6, 2023, a M 7.8 earthquake occurred in southern Turkey near the northern border of Syria.
+              This earthquake was followed about 9 hours later by a M 7.5 earthquake approximately 90 km to the north.
+              The M 7.8 and associated aftershocks lie in the transition zone between the Dead Sea and East Anatolian
+              fault systems. The preliminary location of the M 7.8 earthquake places it within the vicinity of a triple
+              junction between the Arabian and African plates and Anatolian block. The East Anatolian fault accommodates
+              the westward movement of Turkey into the Aegean Sea, while the Dead Sea fault accommodates the northward
+              motion of the Arabia peninsula relative to the African plate.</p>
+            <div id="vis"></div>
+<!--            <button class="btn">-->
+<!--              <a href="#scrollspyPortfolio" style="text-decoration:none;color: #f52225;"> My Work</a>-->
+<!--            </button>-->
           </div>
         </section>
 
@@ -77,51 +113,49 @@
       <div class="container">
 
         <div class="me">
-          <h5 class="d-flex me1" data-aos="zoom-in-right">About Me <div class="line" data-aos="zoom-in-right"></div>
+          <h5 class="d-flex me1" data-aos="zoom-in-right">Earthquake History in Turkey
+            <div class="line" data-aos="zoom-in-right"></div>
           </h5>
-          <h1 data-aos="zoom-in-right">About Me</h1>
-          <p class="col-12 col-lg-6 fs-5" data-aos="zoom-in-right">I'm developer focused on crafting user‑friendly
-            experiences, I am passionate
-            about building excellent Web
-            Designs that improves the lives of those around me.</p>
+          <h1 data-aos="zoom-in-right">Earthquake</h1>
+          <p class="col-12 col-lg-6 fs-5" data-aos="zoom-in-right">
+          All recorded historical earthquakes marked as circles, and seismic zones marked with triangles.
+          </p>
         </div>
 
         <div class="row mt-5">
 
           <div class="con box col-lg-5 col-12 mx-auto">
-            <img src="images/Background/IMG_20211104_231833.jpg" alt="..." class="col-12" data-aos="zoom-in-right">
+            <img src="images/history.png" alt="..." class="col-12" data-aos="zoom-in-right">
             <div class="box-contain">
               <div class="contain">
-                <div class="social">
-                  <a href="https://www.linkedin.com/in/jayesh-tele-9150711b3" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <h1 class="pt-3">Jayesh Tele</h1>
-                <h6>Front-End Web Developer</h6>
+<!--                <div class="social">-->
+<!--                  <a href="https://www.linkedin.com/in/jayesh-tele-9150711b3" target="_blank"><i class="fab fa-linkedin-in"></i></a>-->
+<!--                </div>-->
+                <h1 class="pt-3">Turkey Earthquake</h1>
+                <h6>History</h6>
               </div>
             </div>
           </div>
 
           <div class="con col-lg-6 col-12 mt-5">
-            <h2 class="fw-bold" data-aos="zoom-in-right">I'm Jayesh Tele</h2>
-            <h5 class="fw-bold me1" data-aos="zoom-in-right">A Lead <span>Front-End Web Developer </span>based in
-              <span>India(Pune)</span>
+            <h2 class="fw-bold" data-aos="zoom-in-right">@Some_Topics</h2>
+            <h5 class="fw-bold me1" data-aos="zoom-in-right">Say <span>Something </span>Here
+              <span>Like that</span>
             </h5>
-            <p class="border-bottom pb-5 pt-3" data-aos="zoom-in-right">I design and develop services for customers
-              specializing creating
-              stylish, modern
-              websites, web services and online stores. My passion is to design digital user experiences through
-              meaningful interactions. Check out my Portfolio
+            <p class="border-bottom pb-5 pt-3" data-aos="zoom-in-right">
+              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+              YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+              ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
             </p>
-            <h3 class="fw-bold pt-4" data-aos="zoom-in-right">PERSONAL <span>INFO</span></h3>
+            <h3 class="fw-bold pt-4" data-aos="zoom-in-right">AREA <span>INFO</span></h3>
             <div class="row">
               <section class="name col-12 col-lg-6" data-aos="zoom-in-right">
-                <h6 class="fs-5"><span>Name :</span> Jayesh Tele</h6>
-                <h6 class="fs-5"><span>Age :</span> 23 Years</h6>
-                <h6 class="fs-5"><span>Nationality :</span> Indian</h6>
+                <h6 class="fs-5"><span>Area :</span> Turkey and Syria</h6>
+                <h6 class="fs-5"><span>Zone :</span> Anatolian Fault Zone</h6>
               </section>
               <section class="name col-12 col-lg-6" data-aos="zoom-in-right">
-                <h6 class="fs-5"><span>Address :</span> Ramsingh Nagar, main Road, Shirpur</h6>
-                <h6 class="fs-5"><span>Languages :</span> Marathi, Hindi, English</h6>
+                <h6 class="fs-5"><span>Number of Earthquakes :</span> @NUM</h6>
+                <h6 class="fs-5"><span>Mean Severity :</span> @HOW_MUCH</h6>
               </section>
             </div>
           </div>
@@ -129,77 +163,24 @@
 
         <div class="me my mt-5">
           </h5>
-          <h1 data-aos="zoom-in-right">My Experience</h1>
-          <Button class="btn text-white" data-aos="zoom-in-right">
-            Education & Skills
-          </Button>
-          <div class="education mt-5">
-            <div class="container">
-              <div class="row">
-                <div class="los col-12 col-lg-6 mx-auto">
-                  <section class="edu">
-                    <h3 class="fw-bold tion" data-aos="zoom-in-right">Education</h3>
-                    <h5 class="pt-4 pb-2" data-aos="zoom-in-right">2023</h5>
-                    <h3 data-aos="zoom-in-right">Btech in Mechanical Engineering - <small>R.C Patel Institute of
-                        Technology, Shirpur</small>
-                    </h3>
-                    <h5 class="pt-4 pb-2" data-aos="zoom-in-right">2020</h3>
-                      <h3 data-aos="zoom-in-right">Diploma in Mechanical Engineering - <small>R.C Patel Polytechnic,
-                          Shirpur</small></h3>
-                      <h5 class="pt-4 pb-2" data-aos="zoom-in-right">2016</h3>
-                        <h3 data-aos="zoom-in-right">10th - <small>R.C Patel English Medium School, Shirpur</small></h3>
-                  </section>
+          <h1 data-aos="zoom-in-right">Let's dive deeper into </h1>
+          <h1 class="pt-3">The 2023 Turkey–Syria Earthquake</h1>
 
-                </div>
-                <div class="los col-12 col-lg-6 mx-auto">
-                  <section class="edu">
-                    <h3 class="fw-bold tion tio" data-aos="zoom-in-right">Coding Skills</h3>
-                    <div class="web d-flex justify-content-between mt-4" data-aos="zoom-in-right"
-                      data-aos="zoom-in-right">
-                      <h6>HTML 5</h6>
-                      <h6 class="counter">90%</h6>
-                    </div>
-                    <div class="grey" data-aos="zoom-in-right" data-aos="zoom-in-right">
-                      <div class="red html"></div>
-                    </div>
-                    <div class="web d-flex justify-content-between mt-4" data-aos="zoom-in-right"
-                      data-aos="zoom-in-right">
-                      <h6>CSS 3</h6>
-                      <h6 class="counter">90%</h6>
-                    </div>
-                    <div class="grey" data-aos="zoom-in-right" data-aos="zoom-in-right">
-                      <div class="red html"></div>
-                    </div>
-                    <div class="web d-flex justify-content-between mt-4" data-aos="zoom-in-right"
-                      data-aos="zoom-in-right">
-                      <h6>BOOTSTRAP</h6>
-                      <h6 class="counter">90%</h6>
-                    </div>
-                    <div class="grey" data-aos="zoom-in-right" data-aos="zoom-in-right">
-                      <div class="red xd"></div>
-                    </div>
-                    <div class="web d-flex justify-content-between mt-4" data-aos="zoom-in-right"
-                      data-aos="zoom-in-right">
-                      <h6>JAVA SCRIPT</h6>
-                      <h6 class="counter">90%</h6>
-                    </div>
-                    <div class="grey" data-aos="zoom-in-right" data-aos="zoom-in-right">
-                      <div class="js"></div>
-                    </div>
-                    <div class="web d-flex justify-content-between mt-4" data-aos="zoom-in-right"
-                      data-aos="zoom-in-right">
-                      <h6>React.JS</h6>
-                      <h6 class="counter">90%</h6>
-                    </div>
-                    <div class="grey" data-aos="zoom-in-right" data-aos="zoom-in-right">
-                      <div class="js"></div>
-                    </div>
 
-                  </section>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class='tableauPlaceholder' id='viz1681333820749' >
+              <noscript><a href='#'><img alt='Total Earthquake Damage ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tu&#47;Turkey-work-rev02&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;Turkey-work-rev02&#47;Dashboard1?:language=en-US&amp;:embed=true&amp;publish=yes' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tu&#47;Turkey-work-rev02&#47;Dashboard1&#47;1.png' />
+              <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
+              <script type='text/javascript'>
+              var divElement = document.getElementById('viz1681333820749');
+              var vizElement = divElement.getElementsByTagName('object')[0];
+              if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1300px';vizElement.style.height='827px';}
+              else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1300px';vizElement.style.height='827px';}
+              else { vizElement.style.width='100%';vizElement.style.height='1327px';}
+              var scriptElement = document.createElement('script');
+              scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+              vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              </script>
         </div>
       </div>
     </section>
@@ -207,215 +188,436 @@
     <section class="services" id="scrollspyService">
 
       <div class="me container">
-        <h5 class="d-flex me1" data-aos="zoom-in-right">services <div class="line"></div>
+        <h5 class="d-flex me1" data-aos="zoom-in-right">Social Media <div class="line"></div>
         </h5>
-        <h1 class="col-12 col-lg-6" data-aos="zoom-in-right">I provide wide range of digital services</h1>
-        <div class="row">
+        <h1 class="col-12 col-lg-6" data-aos="zoom-in-right">Listen to the voice from Twitter</h1>
 
-          <div class="col-12 col-sm-6 col-xl-3 mt-5" data-aos="zoom-in-right">
-            <div class="comp  col-11 mx-auto">
-              <a href="#"><i class="fas fa-laptop-code"></i></a>
-              <h3 class="mt-3 mb-5">Web Template Designing</h3>
-              <a href="#" class="color">Learn More<i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
+            <h1 class="m_h1">Turkey Earthquake Tweets</h1>
+    <div class="slide_div">
+      <label id="slidelabel" for="slide">Date</label>
+      <input class="m_input" id="slide" type="range" min="0" max="100" value="0" step="1" />
+    </div>
+    <main id="viz1">
+      <div id="bar"></div>
+      <section id="row2">
+        <div id="word"></div>
+        <div id="pie"></div>
+      </section>
+      <div id="bar_h"></div>
+    </main>
 
-          <div class="col-12 col-sm-6 col-xl-3 mt-5" data-aos="zoom-in-right">
-            <div class="comp col-11 mx-auto">
-              <a href="#"><img src="http://benyreact.ibthemespro.com/img/svg/2.svg" alt=""></i></a>
-              <h3 class="mt-3 mb-5">Logo Designing</h3>
-              <a href="#" class="color">Learn More<i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-xl-3 mt-5" data-aos="zoom-in-left">
-            <div class="comp  col-11 mx-auto">
-              <a href="#"><img src="http://benyreact.ibthemespro.com/img/svg/3.svg" alt=""></i></a>
-              <h3 class="mt-3 mb-5">Mobile App Design</h3>
-              <a href="#" class="color">Learn More<i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
+    <!-- <script src="index.js" type="module"></script> -->
+    <script>
+      d3.csv(
+        "https://raw.githubusercontent.com/nanaAsuka/potential-spoon/main/translated_output.csv"
+      ).then((data) => {
+        data.forEach((d) => {
+          let sentiment_score = parseFloat(d.sentiment);
+          d.sentiment_type =
+            sentiment_score > 0
+              ? "Positive"
+              : sentiment_score < 0
+              ? "Negative"
+              : "Neutral";
 
-          <div class="col-12 col-sm-6 col-xl-3 mt-5" data-aos="zoom-in-left">
-            <div class="comp col-11 mx-auto">
-              <a href="#"><img src="http://benyreact.ibthemespro.com/img/svg/4.svg" alt=""></i></a>
-              <h3 class="mt-3 mb-5">Front-End Design</h3>
-              <a href="#" class="color">Learn More<i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
+          d.lower_translated = d.translated.toLocaleLowerCase();
+        });
+        console.log("data==>", data);
+
+        let min_date = d3.min(data, (d) => new Date(d.date));
+        let max_date = d3.max(data, (d) => new Date(d.date));
+        let diff_days = d3.timeDay.count(min_date, max_date);
+        d3.select("#slidelabel").text(
+          "date : " + d3.timeFormat("%y-%m-%d")(min_date)
+        );
+        d3.select("#slide").attr("max", diff_days);
+
+        function handel_data(data) {
+          let bar_data = d3.rollups(
+            data,
+            (d) => d.length,
+            (d) => new Date(d.date).getHours()
+          );
+          bar_data.sort((a, b) => (a[0] > b[0] ? 1 : -1));
+
+          let bar_class_data = d3.rollups(
+            data,
+            (d) => d.length,
+            (d) => d.Class
+          );
+
+          bar_class_data.sort((a, b) => (a[1] > b[1] ? -1 : 1));
+
+          let piedata = d3
+            .rollups(
+              data,
+              (d) => d.length,
+              (d) => d.sentiment_type
+            )
+            .map((d) => {
+              return {
+                name: d[0],
+                y: (d[1] / data.length) * 100,
+              };
+            });
+
+          // let word_data = data
+          //   .map((d) => {
+          //     return convert_array(d.hashtags);
+          //   })
+          //   .flat(Infinity);
+
+          // word_data = d3
+          //   .rollups(
+          //     word_data,
+          //     (d) => d.length,
+          //     (d) => d
+          //   )
+          //   .map((d) => {
+          //     return {
+          //       name: d[0],
+          //       weight: d[1],
+          //       value: +d[1],
+          //     };
+          //   });
+          let word_data = data;
+          const size = d3
+            .scaleSqrt()
+            .range([100, 200])
+            .domain(d3.extent(word_data, (d) => d.value));
+
+          word_data.forEach((d) => {
+            d.value = size(d.value);
+            d.weight = size(d.weight);
+          });
+          word_data.sort((a, b) => (a.value > b.value ? -1 : 1));
+          return { bar_data, piedata, bar_class_data, word_data };
+        }
+
+        let { bar_data, piedata, bar_class_data, word_data } =
+          handel_data(data);
+        bar(bar_data);
+        pie(piedata);
+        bar_h(bar_class_data);
+        word_clouds(word_data.slice(0, 200));
+
+        d3.select("#slide").on("change", (e, d) => {
+          console.log("e,d==>", e.target.value);
+          // change  date dataLabels
+          let selected_date = d3.timeDay.offset(min_date, e.target.value);
+          d3.select("#slidelabel").text(
+            "date : " + d3.timeFormat("%y-%m-%d")(selected_date)
+          );
+
+          let selected_data = data.filter(
+            (d) => d3.timeDay.count(new Date(d.date), selected_date) === 0
+          );
+          console.log("origin_data==>", selected_data);
+          let { bar_data, piedata, bar_class_data, word_data } =
+            handel_data(selected_data);
+          bar(bar_data);
+          pie(piedata);
+          bar_h(bar_class_data);
+          word_clouds(word_data.slice(0, 200));
+        });
+      });
+      let classes = {
+        Help: ["help", "assistance", "support", "donate"],
+        News: ["earthquake", "magnitude", "aftershock", "rescue", "recovery"],
+        Funding: ["fundraiser", "donation", "charity", "fund"],
+        "Survivor stories": [
+          "survivor",
+          "personal account",
+          "experience",
+          "impact",
+        ],
+        Volunteering: ["volunteer", "helping", "aid", "support"],
+        "Political response": ["government", "political", "action", "response"],
+        "Humanitarian aid": ["humanitarian", "aid", "relief", "support"],
+        "Casualty reports": ["injury", "death", "fatal", "missing", "victims"],
+        "Infrastructure damage": [
+          "building",
+          "bridge",
+          "road",
+          "power",
+          "water",
+          "gas",
+          "telecommunications",
+        ],
+        "Weather conditions": [
+          "storm",
+          "rain",
+          "snow",
+          "wind",
+          "temperature",
+          "weather",
+        ],
+        "Emergency services": [
+          "ambulance",
+          "fire",
+          "police",
+          "emergency",
+          "rescue",
+        ],
+        "Social media activity": ["tweet", "post", "share", "social media"],
+        "Prayer and condolences": [
+          "prayer",
+          "thoughts",
+          "condolences",
+          "sympathy",
+        ],
+        "Technical information": [
+          "data",
+          "statistics",
+          "analysis",
+          "technical",
+        ],
+        "International aid": ["international", "donor", "aid", "relief"],
+        "Business impact": ["business", "economic", "financial", "impact"],
+        "Personal safety": [
+          "safety",
+          "evacuation",
+          "shelter",
+          "protection",
+          "precaution",
+        ],
+      };
+
+      function bar(data) {
+        Highcharts.chart("bar", {
+          chart: {
+            type: "column",
+          },
+          title: {
+            text: "Number of tweets by Hours",
+          },
+          subtitle: {
+            text: 'Source: <a href="https://www.kaggle.com/code/sujithmandala/turkey-earthquake-tweets-nlp-dtc/notebook" target="_blank">Turkey Earthquake Tweets</a>',
+          },
+          xAxis: {
+            type: "category",
+            categories: data.map((d) => d[0]),
+          },
+          yAxis: {
+            min: 0,
+            title: {
+              text: "Number of tweets",
+            },
+          },
+          legend: {
+            enabled: false,
+          },
+          tooltip: {
+            pointFormat: "Population in 2021: <b>{point.y:.0f}  </b>",
+          },
+          series: [
+            {
+              name: "tweets",
+              data: data.map((d) => d[1]),
+              dataLabels: {
+                enabled: true,
+                rotation: 90,
+                color: "#FFFFFF",
+                align: "right",
+                format: "{point.y:.0f}", // one decimal
+                y: 10, // 10 pixels down from the top
+                style: {
+                  fontSize: "13px",
+                  fontFamily: "Verdana, sans-serif",
+                },
+              },
+            },
+          ],
+        });
+      }
+
+      function pie(data) {
+        // Create the chart
+        Highcharts.chart("pie", {
+          chart: {
+            type: "pie",
+          },
+          title: {
+            text: "Sentiment",
+            align: "left",
+          },
+          subtitle: {
+            text: "",
+            align: "left",
+          },
+
+          accessibility: {
+            announceNewData: {
+              enabled: true,
+            },
+            point: {
+              valueSuffix: "",
+            },
+          },
+
+          plotOptions: {
+            series: {
+              dataLabels: {
+                enabled: true,
+                format: "{point.name}: {point.y:.2f}%",
+              },
+            },
+          },
+
+          tooltip: {
+            headerFormat:
+              '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat:
+              '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>',
+          },
+
+          series: [
+            {
+              name: "Source",
+              colorByPoint: true,
+              data: data,
+            },
+          ],
+        });
+      }
+
+      function word_cloud(data) {
+        data.sort((a, b) => (a.weight > b.weight ? -1 : 1));
+        data = data.slice(0, 30);
+        Highcharts.chart("word", {
+          accessibility: {
+            screenReaderSection: {
+              beforeChartFormat:
+                "<h5>{chartTitle}</h5>" +
+                "<div>{chartSubtitle}</div>" +
+                "<div>{chartLongdesc}</div>" +
+                "<div>{viewTableButton}</div>",
+            },
+          },
+          series: [
+            {
+              type: "wordcloud",
+              data,
+              name: "Occurrences",
+            },
+          ],
+          title: {
+            text: " Turkey Earthquake Tweets Hashtags",
+            align: "left",
+          },
+          subtitle: {
+            text: " ",
+            align: "left",
+          },
+          tooltip: {
+            headerFormat:
+              '<span style="font-size: 16px"><b>{point.key}</b></span><br>',
+          },
+        });
+      }
+      function bar_h(data) {
+        Highcharts.chart("bar_h", {
+          chart: {
+            type: "bar",
+          },
+          title: {
+            text: "#Tweets by Class",
+          },
+          subtitle: {
+            text: 'Source: <a href="https://www.kaggle.com/code/sujithmandala/turkey-earthquake-tweets-nlp-dtc/notebook" target="_blank">Turkey Earthquake Tweets</a>',
+          },
+          xAxis: {
+            categories: data.map((d) => d[0]),
+          },
+          yAxis: {
+            min: 0,
+            title: {
+              text: "Population (millions)",
+            },
+          },
+          legend: {
+            enabled: false,
+          },
+          tooltip: {
+            pointFormat: "Population in 2021: <b>{point.y:.1f} millions</b>",
+          },
+          plotOptions: {
+            bar: {
+              dataLabels: {
+                enabled: true,
+              },
+            },
+          },
+          series: [
+            {
+              name: "Class",
+              data: data.map((d) => d[1]),
+            },
+          ],
+        });
+      }
+
+      function convert_array(str) {
+        var arr = JSON.parse(str.replace(/'/g, '"'));
+        return arr;
+      }
+
+      let root = am5.Root.new("word");
+      var series = root.container.children.push(
+        am5wc.WordCloud.new(root, {
+          rotationThreshold: 0.7,
+          maxCount: 200,
+          minWordLength: 6,
+          minFontSize: am5.percent(0.5),
+          maxFontSize: am5.percent(30),
+          text: "",
+          // categoryField: "name",
+          // valueField: "weight",
+        })
+      );
+      function word_clouds(data) {
+        series.set("heatRules", [
+          {
+            target: series.labels.template,
+            dataField: "value",
+            min: am5.color(0xffe15d),
+            max: am5.color(0xdc3535),
+            key: "fill",
+          },
+        ]);
+        // 设置字体颜色
+
+        let newText = data.reduce(
+          (pre, cur) => pre + " " + cur.lower_translated,
+          ""
+        );
+
+        series.set("text", newText);
+        // series.set("fill", "#FFA500");
+        // series.set("heatRules", [
+        //   {
+        //     target: series.labels.template,
+        //     dataField: "value",
+        //     min: am5.color(0xffb899),
+        //     max: am5.color(0xcc3d00),
+        //     key: "fill",
+        //   },
+        // ]);
+        // series.data.setAll(data);
+      }
+
+      // word_clouds();
+    </script>
+
       </div>
     </section>
 
-    <section class="portfolio" id="scrollspyPortfolio">
 
-      <div class="me container">
-        <h5 class="d-flex me1">Projects <div class="line"></div>
-        </h5>
-        <h1 class="col-12 col-lg-6">My Projects</h1>
 
-        <div class="row">
-
-          <div class="port col-12 col-lg-6" data-aos="fade-right">
-            <img src="images/Background/Weeding.PNG" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Weeding</h1>
-              <button class="btn"><a href="Templates/Weeding/index.html" target="_blank">View More</a></button>
-            </div>
-          </div>
-          <div class="port col-12 col-lg-6" data-aos="fade-left">
-            <img src="images/Background/Garage.PNG" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Garage</h1>
-              <button class="btn"><a href="Templates/Garage/index.html" target="_blank">View More</a></button>
-            </div>
-          </div>
-          <div class="port col-12 col-lg-6" data-aos="fade-right">
-            <img src="images/Background/Education.PNG" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Education</h1>
-              <button class="btn"><a href="Templates/Education/index.html" target="_blank">View More</a></button>
-            </div>
-          </div>
-
-          <div class="port col-12 col-lg-6" data-aos="fade-left">
-            <img src="images/Background/Gym.PNG" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Gym</h1>
-              <button class="btn"><a href="Templates/Gym/index.html" target="_blank">View
-                  More</a></button>
-            </div>
-          </div>
-
-          <div class="port col-12 col-lg-6" data-aos="fade-right">
-            <img src="images/Background/Doctor.PNG" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Doctor</h1>
-              <button class="btn"><a href="Templates/Doctor/index.html" target="_blank">View More</a></button>
-            </div>
-          </div>
-          <div class="port col-12 col-lg-6" data-aos="fade-left">
-            <img src="images/Background/Cafe.PNG" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Cafeteria</h1>
-              <button class="btn"><a href="Templates/Coffee%20Shop/index.html" target="_blank">View More</a></button>
-            </div>
-          </div>
-          <div class="port col-12 col-lg-6" data-aos="fade-right">
-            <img src="images/Background/Fashion.PNG" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Fashion</h1>
-              <button class="btn"><a href="Templates/Fashion/index.html" target="_blank">View More</a></button>
-            </div>
-          </div>
-          <div class="port col-12 col-lg-6" data-aos="fade-left">
-            <img src="images/Background/Bakery.PNG" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Bakery</h1>
-              <button class="btn"><a href="Templates/Bakery/index.html" target="_blank">View More</a></button>
-            </div>
-          </div>
-          <div class="port col-12 col-lg-6" data-aos="fade-right">
-            <img src="images/Background/Bank.PNG" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Bank</h1>
-              <button class="btn"><a href="Templates/Bank/index.html" target="_blank">View
-                  More</a></button>
-            </div>
-          </div>
-          <div class="port col-12 col-lg-6" data-aos="fade-left">
-            <img src="images/Background/Salon.png" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Salon</h1>
-              <button class="btn"><a href="Templates/Salon/index.html" target="_blank">View More</a></button>
-            </div>
-          </div>
-          <div class="port col-12 col-lg-6" data-aos="fade-left">
-            <img src="images/Background/Cash register manager App.png" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Cash register manager App</h1>
-              <button class="btn"><a href="https://cash-return-app.netlify.app/" target="_blank">View More</a></button>
-            </div>
-          </div>
-          <div class="port col-12 col-lg-6" data-aos="fade-left">
-            <img src="images/Background/Fun translation App.png" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Fun translation App</h1>
-              <button class="btn"><a href="https://jayeshtele-fun-translate-app.netlify.app/" target="_blank">View
-                  More</a></button>
-            </div>
-          </div>
-          <div class="port col-12 col-lg-6" data-aos="fade-left">
-            <img src="images/Background/Stocks.png" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Stocks Profit/Loss App</h1>
-              <button class="btn"><a href="https://stocks-profit-loss-giver-app.netlify.app/" target="_blank">View
-                  More</a></button>
-            </div>
-          </div>
-          <div class="port col-12 col-lg-6" data-aos="fade-left">
-            <img src="images/Background/To Do App.png" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>To Do App</h1>
-              <button class="btn"><a href="https://jayeshtele-todo-list.netlify.app/" target="_blank">View
-                  More</a></button>
-            </div>
-          </div>
-          <div class="port col-12 col-lg-6" data-aos="fade-left">
-            <img src="images/Background/Tic Tac Toe App.png" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Tic Tac Toe App</h1>
-              <button class="btn"><a href="https://jayesh-tic-tac-game.netlify.app/" target="_blank">View
-                  More</a></button>
-            </div>
-          </div>
-          <div class="port col-12 col-lg-6" data-aos="fade-left">
-            <img src="images/Background/Calculator.png" alt="..." class="img-fluid">
-            <div class="content">
-              <h1>Calculator</h1>
-              <button class="btn"><a href="https://jayeshtele-calculator.netlify.app/" target="_blank">View
-                  More</a></button>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section class="contact-us" id="scrollspyContact">
-      <div class="container" data-aos="zoom-in-right">
-        <div class="me">
-          <h5 class="d-flex me1">Contact <div class="line"></div>
-          </h5>
-        </div>
-        <div id="succmsg" class="col-sm-12" style="display: none;"></div>
-        <form name="frm_contact_us" id="frm_contact_us" method="post" action="" class="col-12 col-lg-6">
-
-          <div class="text-danger">
-            <h3>All fields are mandatory</h3>
-          </div>
-          <div class="form-group">
-            <label for="txtname" class="text-white fw-bold mb-2 mt-3">Name</label>
-            <input type="text" name="txtname" id="txtname" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label for="txtphone" class="text-white fw-bold mt-3 mb-2">Contact No.</label>
-            <input type="text" name="txtphone" id="txtphone" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label for="txtemail" class="text-white fw-bold mt-3 mb-2">Email-ID</label>
-            <input type="email" name="txtemail" id="txtemail" class="form-control" pattern="" />
-          </div>
-          <div class="form-group">
-            <label for="txtmsg" class="text-white fw-bold mt-3 mb-2">Message</label>
-            <textarea class="form-control  pb-5" name="txtmsg" id="ta_msg" placeholder="Type your msg here"></textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit" name="submit" class="btn btn-primary mt-5 msg">Send Message</button>
-          </div>
-        </form>
-    </section>
 
 
     <footer>
-      <p>© 2023 by Jayesh Tele. All rights reserved.</p>
+      <p>© 2023 by Tianliang Xu, Menghui Sun, Christina, Chitt. All rights reserved.</p>
     </footer>
   </main>
 
@@ -430,6 +632,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+  <script src="javascript/tianlix.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
     integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
