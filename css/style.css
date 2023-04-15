@@ -8,7 +8,8 @@
 }
 
 .body {
-    overflow-x: hidden
+    overflow-x: hidden;
+    box-sizing: content-box;
 }
 
 .fa-sort-up {
@@ -493,17 +494,17 @@ footer {
     color: #fff
 }
 /***********************************/
-#row2 {
+.row2 {
     display: grid;
-    grid-template-columns: 50% 50%;
-    height: 70vh;
+    grid-template-columns: 45% 45%;
+    height: 45vh;
 }
-#bar {
-    height: 70vh;
+.bar {
+    height: 40vh;
 }
 
-#bar_h {
-    height: 70vh;
+.bar_h {
+    height: 40vh;
 }
 
 main {

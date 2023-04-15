@@ -197,15 +197,56 @@
       <input class="m_input" id="slide" type="range" min="0" max="100" value="0" step="1" />
     </div>
     <main id="viz1">
-      <div id="bar"></div>
-      <section id="row2">
+      <section class="row2">
         <div id="word"></div>
         <div id="pie"></div>
       </section>
-      <div id="bar_h"></div>
-      
+      <section class="row2">
+        <div id="bar"></div>
+        <div id="bar_h"></div>
+      </section>
+<section>
+        <p>
 
+          Positive:
+        </p>
+<p>
+  <p>
 
+    A soldier gives his boots to a man who had to leave his house without shoes in a panic during the first earthquake on February 6 🏼
+  </p>
+  <p>
+
+    Is there a way to go help those in Turkey?!🙄  Is there a recruitment process?  May ALLAH relieve Turkey and Syria people from their miseries and tests.
+
+  </p>
+  <p>
+
+    People of my beautiful country, i hope the disasters will end as soon as possible.
+  </p>
+</p>
+        <p>
+
+          Neutral:
+        </p>
+        <p>
+          <p>
+
+            🛑Now an #earthquake is hitting #Turkey and it is being felt by #Syria, #Lebanon
+          </p>
+          <p>
+
+            A camera captured the moment a car shook violently as a 6.4-magnitude earthquake struck Türkiye’s southern Hatay province
+          </p>
+        </p>
+        <p>
+
+          Negative：
+        </p>
+        <p>
+
+          Previous two biggest earthquakes pushed Turkey 10 years back.
+        </p>
     </main>
 
     <!-- <script src="index.js" type="module"></script> -->
@@ -228,6 +269,7 @@
 
         let min_date = d3.min(data, (d) => new Date(d.date));
         let max_date = d3.max(data, (d) => new Date(d.date));
+
         let diff_days = d3.timeDay.count(min_date, max_date);
         d3.select("#slidelabel").text(
           "date : " + d3.timeFormat("%y-%m-%d")(min_date)
@@ -295,9 +337,12 @@
           word_data.sort((a, b) => (a.value > b.value ? -1 : 1));
           return { bar_data, piedata, bar_class_data, word_data };
         }
-
+        let min_date_data = data.filter(
+          (d) => d3.timeDay.count(new Date(d.date), min_date) === 0
+        );
         let { bar_data, piedata, bar_class_data, word_data } =
-          handel_data(data);
+          handel_data(min_date_data);
+
         bar(bar_data);
         pie(piedata);
         bar_h(bar_class_data);
@@ -402,7 +447,7 @@
           },
           yAxis: {
             min: 0,
-            max: 1200,
+            max: d3.max(data,d=>d[1]),
             title: {
               text: "Number of tweets",
             },
@@ -411,7 +456,7 @@
             enabled: false,
           },
           tooltip: {
-            pointFormat: "Population in 2021: <b>{point.y:.0f}  </b>",
+            pointFormat: "number of tweets: <b>{point.y:.0f}  </b>",
           },
           series: [
             {
@@ -519,6 +564,8 @@
         });
       }
       function bar_h(data) {
+        data = data.filter((d) => d[0] !== "Other");
+
         Highcharts.chart("bar_h", {
           chart: {
             type: "bar",
@@ -535,14 +582,14 @@
           yAxis: {
             min: 0,
             title: {
-              text: "Population (millions)",
+              text: "#Tweets",
             },
           },
           legend: {
             enabled: false,
           },
           tooltip: {
-            pointFormat: "Population in 2021: <b>{point.y:.1f} millions</b>",
+            pointFormat: "#Tweets: <b>{point.y:.1f}  </b>",
           },
           plotOptions: {
             bar: {
