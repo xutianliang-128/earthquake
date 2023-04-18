@@ -1,3 +1,3 @@
 # earthquake
 
-Project of Group 7
+Project of Group 19
